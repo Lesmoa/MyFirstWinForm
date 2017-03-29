@@ -1,0 +1,30 @@
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\bin\Debug\CourseTable.dll
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\bin\Debug\CourseTable.pdb
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.csprojResolveAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.TableInterface.resources
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.GenerateResource.Cache
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.dll
+C:\Users\SAMSUNG\Desktop\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.pdb
+C:\Temp\CourseTable\CourseTable\bin\Debug\CourseTable.dll
+C:\Temp\CourseTable\CourseTable\bin\Debug\CourseTable.pdb
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.csprojResolveAssemblyReference.cache
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.TableInterface.resources
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.GenerateResource.Cache
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.dll
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.pdb
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\bin\Debug\CourseTable.dll
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\bin\Debug\CourseTable.pdb
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\obj\Debug\CourseTable.csprojResolveAssemblyReference.cache
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\obj\Debug\CourseTable.TableInterface.resources
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.GenerateResource.Cache
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\obj\Debug\CourseTable.dll
+C:\Users\SAMSUNG\Desktop\CourseTable G\CourseTable\CourseTable\obj\Debug\CourseTable.pdb
+C:\Temp\CourseTable\CourseTable\CourseTable\bin\Debug\CourseTable.dll
+C:\Temp\CourseTable\CourseTable\CourseTable\bin\Debug\CourseTable.pdb
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.csprojResolveAssemblyReference.cache
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.TableInterface.resources
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.GenerateResource.Cache
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.dll
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.pdb
+C:\Temp\CourseTable\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.ResolveComReference.cache
+C:\Temp\CourseTable\CourseTable\obj\Debug\CourseTable.csproj.ResolveComReference.cache

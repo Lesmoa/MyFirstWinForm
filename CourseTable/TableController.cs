@@ -12,6 +12,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CourseTable
 {
+    /// <summary>
+    /// controller the interface and entity classes
+    /// </summary>
     class TableController
     {
         private TableInterface _theInterface;
@@ -20,7 +23,9 @@ namespace CourseTable
         private BindingList<CourseTime> _controlList;
         private StreamReader sr;
         private List<Member> _memberList;
-        private List<Course> _courseList, _distinctCourseList, _courseTimeList;
+        private List<Course> _courseList;
+        private List<Course> _distinctCourseList;
+        private List<Course> _courseTimeList;
 
         /// <summary>
         /// Init and call methods to load data from txt documents
@@ -84,7 +89,7 @@ namespace CourseTable
         {
             for (int i = 0; i < _memberList.Count; i++)
             {
-                if (cboMemberID.SelectedValue!= null && cboMemberID.SelectedValue.Equals(_memberList[i].MemberID))
+                if (cboMemberID.SelectedValue != null && cboMemberID.SelectedValue.Equals(_memberList[i].MemberID))
                 {
                     return _memberList[i].MemberName;
                 }
@@ -204,7 +209,7 @@ namespace CourseTable
 
                 if (courseDay == "Monday")
                 {
-                    if(_controlList[intTime - 6].Mon==null)
+                    if (_controlList[intTime - 6].Mon == null)
                     {
                         _controlList[intTime - 6].Mon = courseName;
                     }
@@ -297,7 +302,7 @@ namespace CourseTable
         /// <param name="dgvTimeTable"></param>
         public void reset(DataGridView dgvTimeTable)
         {
-            foreach(CourseTime c in _controlList)
+            foreach (CourseTime c in _controlList)
             {
                 c.Mon = null;
                 c.Tue = null;

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseTable
 {
+    /// <summary>
+    /// (partial) Design interface form
+    /// </summary>
     public partial class TableInterface: UserControl
     {
         private TableController theController;

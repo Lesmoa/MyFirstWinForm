@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CourseTable
 {
+    /// <summary>
+    /// Entity class
+    /// </summary>
     class CourseTime
     {
         public string Mon { get; set; }

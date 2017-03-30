@@ -67,7 +67,6 @@ namespace CourseTable
             this.cboStartTime.Name = "cboStartTime";
             this.cboStartTime.Size = new System.Drawing.Size(223, 23);
             this.cboStartTime.TabIndex = 1;
-            this.cboStartTime.SelectedIndexChanged += new System.EventHandler(this.cboStartTime_SelectedIndexChanged);
             // 
             // lblCourse
             // 
@@ -151,7 +150,6 @@ namespace CourseTable
             this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(121, 25);
             this.txtName.TabIndex = 12;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // dgvTimeTable
             // 

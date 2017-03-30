@@ -13,6 +13,10 @@ namespace CourseTable
     public partial class TableInterface: UserControl
     {
         private TableController theController;
+
+        /// <summary>
+        /// Init interface form, call Binding method and set widgets usabilities.
+        /// </summary>
         public TableInterface()
         {
             InitializeComponent();
@@ -25,40 +29,33 @@ namespace CourseTable
             btnEcport.Enabled = false;
         }
 
-        private void dgvTimeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void courseBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TableInterface_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
+        /// <summary>
+        /// Set DataGridView row name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvTimeTable_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            // draw time to row header cell
             if (e.ColumnIndex < 0 && e.RowIndex >= 0)
             {
-                e.Paint(e.ClipBounds, DataGridViewPaintParts.All);//location and draw parts.
+                e.Paint(e.ClipBounds, DataGridViewPaintParts.All);
                 Rectangle indexRect = e.CellBounds;
-                indexRect.Inflate(-2, -2);//move the intent from rectangle
+                indexRect.Inflate(-2, -2);
                 TextRenderer.DrawText(e.Graphics,
-                    (e.RowIndex + 6).ToString().PadLeft(2, '0') + ":00",//intent
-                    e.CellStyle.Font,//font
+                    (e.RowIndex + 6).ToString().PadLeft(2, '0') + ":00",
+                    e.CellStyle.Font,
                     indexRect,
                     e.CellStyle.ForeColor,
-                    TextFormatFlags.Right | TextFormatFlags.VerticalCenter);//measure and render text 
+                    TextFormatFlags.Right | TextFormatFlags.VerticalCenter);
                 e.Handled = true;
             }
         }
 
+        /// <summary>
+        /// Set widgets usabilities and call showMemberName method.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cboMemberID_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtName.Text = theController.showMemberName(cboMemberID);
@@ -69,21 +66,11 @@ namespace CourseTable
             btnEcport.Enabled = false;
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tableControllerBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboStartTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// call showStartTime method and set widgets usabilities
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cboCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
             theController.showStartTime(cboCourse, cboStartTime);
@@ -91,6 +78,11 @@ namespace CourseTable
             btnConfirm.Enabled = true;
         }
 
+        /// <summary>
+        /// Call confirm method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             theController.confirm(cboCourse, cboStartTime, dgvTimeTable);
@@ -98,11 +90,21 @@ namespace CourseTable
             btnEcport.Enabled = true;
         }
 
+        /// <summary>
+        /// Call Reset method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             theController.reset(dgvTimeTable);
         }
 
+        /// <summary>
+        /// Call Export to Excel method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEcport_Click(object sender, EventArgs e)
         {
             theController.exportToExcel(dgvTimeTable);

@@ -22,13 +22,22 @@ namespace CourseTable
         private List<Member> _memberList;
         private List<Course> _courseList, _distinctCourseList, _courseTimeList;
 
-        public TableController(TableInterface newInterface)//if without para
+        /// <summary>
+        /// Init and call methods to load data from txt documents
+        /// </summary>
+        /// <param name="newInterface"></param>
+        public TableController(TableInterface newInterface)
         {
             _theInterface = newInterface;
             selectMemberID();
             selectCourse();
         }
 
+        /// <summary>
+        /// Parse string into array of fields.
+        /// </summary>
+        /// <param name="newRecord"></param>
+        /// <returns></returns>
         public string[] getFields(string newRecord)
         {
             char separator = ',';
@@ -36,6 +45,9 @@ namespace CourseTable
             return temp;
         }
 
+        /// <summary>
+        /// Load Member records from txt and parse into MemberID and MemberName
+        /// </summary>
         public void selectMemberID()
         {
             sr = new StreamReader("C:\\Temp\\CourseTable\\MemberList.txt");
@@ -63,6 +75,11 @@ namespace CourseTable
             }
         }
 
+        /// <summary>
+        /// Show Member Name by selected MemberID 
+        /// </summary>
+        /// <param name="cboMemberID"></param>
+        /// <returns></returns>
         public string showMemberName(ComboBox cboMemberID)
         {
             for (int i = 0; i < _memberList.Count; i++)
@@ -76,6 +93,9 @@ namespace CourseTable
             return "";
         }
 
+        /// <summary>
+        /// Load Course records from txt and parse into fields
+        /// </summary>
         public void selectCourse()
         {
             sr = new StreamReader("C:\\Temp\\CourseTable\\CourseList.txt");
@@ -121,25 +141,27 @@ namespace CourseTable
             }
         }
 
+        /// <summary>
+        /// Provide optional course time by selected course name
+        /// </summary>
+        /// <param name="cboCourse"></param>
+        /// <param name="cboStartTime"></param>
         public void showStartTime(ComboBox cboCourse, ComboBox cboStartTime)
         {
             _courseTimeList = new List<Course>();
-            //cboStartTime.Text = "";
-
             _courseTimeList = _courseList.FindAll((Course c) => c.CourseID.Equals(cboCourse.SelectedValue));
-            //foreach (Course c in _courseList)
-            //{
-            //    if (c.CourseID.Equals(cboCourse.SelectedValue))
-            //    {
-            //        _courseTimeList.Add(c);
-            //    }
-            //}
             cboStartTime.DataSource = _courseTimeList;
             cboStartTime.ValueMember = "DisplayTime";
             cboStartTime.DisplayMember = "DisplayTime";
 
         }
 
+        /// <summary>
+        /// Binding datasourse to widgets(cboMemberID/cboCourse/dgvTimeTable)
+        /// </summary>
+        /// <param name="cboMemberID"></param>
+        /// <param name="cboCourse"></param>
+        /// <param name="dgvTimeTable"></param>
         public void BindControls(ComboBox cboMemberID, ComboBox cboCourse, DataGridView dgvTimeTable)
         {
             cboMemberID.DataSource = _memberList;
@@ -160,6 +182,13 @@ namespace CourseTable
 
             dgvTimeTable.DataSource = _controlList;
         }
+
+        /// <summary>
+        /// Add specified course to relevant table cell
+        /// </summary>
+        /// <param name="cboCourse"></param>
+        /// <param name="cboStartTime"></param>
+        /// <param name="dgvTimeTable"></param>
         public void confirm(ComboBox cboCourse, ComboBox cboStartTime, DataGridView dgvTimeTable)
         {
             if (!string.IsNullOrEmpty(cboCourse.Text) && !string.IsNullOrEmpty(cboStartTime.Text))
@@ -262,6 +291,10 @@ namespace CourseTable
             dgvTimeTable.Refresh();
         }
 
+        /// <summary>
+        /// Reset time table
+        /// </summary>
+        /// <param name="dgvTimeTable"></param>
         public void reset(DataGridView dgvTimeTable)
         {
             foreach(CourseTime c in _controlList)
@@ -277,6 +310,10 @@ namespace CourseTable
             }
         }
 
+        /// <summary>
+        /// Export to Excel
+        /// </summary>
+        /// <param name="dgvTimeTable"></param>
         public void exportToExcel(DataGridView dgvTimeTable)
         {
             int colCount = 0;
@@ -324,8 +361,6 @@ namespace CourseTable
                     }
                 }
 
-
-
                 for (int i = 0; i < dgvTimeTable.Rows.Count; i++)
                 {
                     int columnIndex = 0;
@@ -368,10 +403,6 @@ namespace CourseTable
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-        }
-        public void temp()
-        {
-            List<Course> tablesourse = new List<Course>();
         }
     }
 }

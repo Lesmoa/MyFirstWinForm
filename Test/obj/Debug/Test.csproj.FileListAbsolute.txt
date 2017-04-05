@@ -17,6 +17,6 @@ C:\Temp\CourseTable\Test\bin\Debug\Test.pdb
 C:\Temp\CourseTable\Test\bin\Debug\CourseTable.dll
 C:\Temp\CourseTable\Test\bin\Debug\CourseTable.pdb
 C:\Temp\CourseTable\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-C:\Temp\CourseTable\Test\obj\Debug\Test.Form1.resources
 C:\Temp\CourseTable\Test\obj\Debug\Test.Properties.Resources.resources
 C:\Temp\CourseTable\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Temp\CourseTable\Test\obj\Debug\Test.GymForm.resources

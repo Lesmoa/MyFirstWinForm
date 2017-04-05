@@ -18,8 +18,8 @@ namespace CourseTable
     class TableController
     {
         private TableInterface _theInterface;
-        private Course theCourse;
-        private Member theMember;
+        private Course _theCourse;
+        private Member _theMember;
         private BindingList<CourseTime> _controlList;
         private StreamReader sr;
         private List<Member> _memberList;
@@ -58,20 +58,20 @@ namespace CourseTable
             sr = new StreamReader("C:\\Temp\\CourseTable\\MemberList.txt");
             _memberList = new List<Member>();
 
-            theMember = new Member();
-            theMember.MemberName = "";
-            _memberList.Add(theMember);
+            _theMember = new Member();
+            _theMember.MemberName = "";
+            _memberList.Add(_theMember);
 
             try
             {
                 string listRecord;
                 while ((listRecord = sr.ReadLine()) != null)
                 {
-                    theMember = new Member();
+                    _theMember = new Member();
                     string[] temp = getFields(listRecord);
-                    theMember.MemberID = temp[0];
-                    theMember.MemberName = temp[1];
-                    _memberList.Add(theMember);
+                    _theMember.MemberID = temp[0];
+                    _theMember.MemberName = temp[1];
+                    _memberList.Add(_theMember);
                 }
             }
             catch (IOException)
@@ -106,29 +106,29 @@ namespace CourseTable
             sr = new StreamReader("C:\\Temp\\CourseTable\\CourseList.txt");
 
 
-            theCourse = new Course();
-            theCourse.Name = "";
+            _theCourse = new Course();
+            _theCourse.Name = "";
             _courseList = new List<Course>();
             _distinctCourseList = new List<Course>();
-            _distinctCourseList.Add(theCourse);
+            _distinctCourseList.Add(_theCourse);
 
             try
             {
                 string listRecord;
                 while ((listRecord = sr.ReadLine()) != null)
                 {
-                    theCourse = new Course();
+                    _theCourse = new Course();
                     bool flag = false;
                     string[] temp = getFields(listRecord);
-                    theCourse.CourseID = temp[0];
-                    theCourse.Name = temp[1];
-                    theCourse.CourseDay = temp[2];
-                    theCourse.StartTime = temp[3];
-                    _courseList.Add(theCourse);
+                    _theCourse.CourseID = temp[0];
+                    _theCourse.Name = temp[1];
+                    _theCourse.CourseDay = temp[2];
+                    _theCourse.StartTime = temp[3];
+                    _courseList.Add(_theCourse);
 
                     foreach (Course tmp in _distinctCourseList)
                     {
-                        if (tmp.Name.Equals(theCourse.Name))
+                        if (tmp.Name.Equals(_theCourse.Name))
                         {
                             flag = true;
                             break;
@@ -136,7 +136,7 @@ namespace CourseTable
                     }
                     if (flag != true)
                     {
-                        _distinctCourseList.Add(theCourse);
+                        _distinctCourseList.Add(_theCourse);
                     }
                 }
             }

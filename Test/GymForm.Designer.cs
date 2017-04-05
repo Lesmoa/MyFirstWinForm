@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    partial class Form1
+    partial class GymForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,14 +40,14 @@
             this.tableInterface1.Load += new System.EventHandler(this.tableInterface1_Load);
             this.tableInterface1.Click += new System.EventHandler(this.tableInterface1_Click);
             // 
-            // Form1
+            // GymForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 839);
             this.Controls.Add(this.tableInterface1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GymForm";
+            this.Text = "GymForm";
             this.ResumeLayout(false);
 
         }
